@@ -1,4 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { Paciente } from './pacientes.entity';
+import { PacientesDao } from './dao/PacientesImplementation.dao';
 
 @Injectable()
 export class PacientesService {
