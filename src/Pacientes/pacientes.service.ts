@@ -4,24 +4,28 @@ import { PacientesDao } from './dao/PacientesImplementation.dao';
 
 @Injectable()
 export class PacientesService {
-    findAll(): string {
-        return 'findall';
+    constructor(
+        private readonly pacientesDao: PacientesDao,
+    ) {}
+
+    async findAll(): Promise<Paciente[]> {
+        return await this.pacientesDao.findAll();
     }
 
-    create(): string {
-        return 'create';
+    async create(paciente: Paciente): Promise<Paciente> {
+        return await this.pacientesDao.create(paciente);
     }
 
-    update(id: number): string {
-        return 'update';
+    async update(id: number, paciente: Paciente): Promise<{}> {
+        return await this.pacientesDao.update(id, paciente);
     }
 
-    delete(id: number): string {
-        return 'delete';
+    async delete(id: number): Promise<{}> {
+        return await this.pacientesDao.delete(id);
     }
 
-    findOne(id: number): string {
-        return `${id}`;
+    async findOne(id: number): Promise<Paciente> {
+        return await this.pacientesDao.findOne(id);
     }
 
 }

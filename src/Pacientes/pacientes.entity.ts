@@ -72,6 +72,6 @@ export class Paciente {
     sp: number;
 
     @Column()
-    Observacao: string;
+    observacao: string;
 
 }
