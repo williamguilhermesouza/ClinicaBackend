@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {PacientesModule} from './Pacientes/pacientes.module';
+import { Paciente } from './Pacientes/pacientes.entity';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import {PacientesModule} from './Pacientes/pacientes.module';
         username: 'b122y',
         password: '123',
         database: 'b122y',
-        entities: [],
+        entities: [Paciente],
         synchronize: true,
     }),
     PacientesModule,
