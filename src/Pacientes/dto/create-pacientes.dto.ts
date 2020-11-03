@@ -2,7 +2,7 @@ import { IsInt, IsString, IsNumber, IsDate } from 'class-validator';
 
 export class CreatePacienteDto {
     @IsInt()
-    readonly ID: number;
+    readonly id: number;
     @IsString()
     readonly nome: string;
     @IsString()
