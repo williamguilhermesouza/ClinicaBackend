@@ -2,6 +2,7 @@ import { Controller, Get, Put, Post, Delete, Param, Body } from '@nestjs/common'
 import { PacientesService } from './pacientes.service';
 import { Paciente } from './pacientes.entity';
 import { CreatePacienteDto } from './dto/create-pacientes.dto';
+import { QueryDto } from './dto/query.dto';
 
 @Controller('pacientes')
 export class PacientesController {
@@ -15,6 +16,11 @@ export class PacientesController {
     @Post('/create')
     async createPaciente(@Body() createPacienteDto: CreatePacienteDto): Promise<Paciente> {
         return await this.pacientesService.create(createPacienteDto);
+    }
+
+    @Post('/findbyname')
+    async findByName(@Body() queryDto: QueryDto): Promise<Paciente[]> {
+        return await this.pacientesService.findByName(queryDto);
     }
 
     @Put(':id')

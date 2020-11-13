@@ -28,4 +28,9 @@ export class PacientesService {
         return await this.pacientesDao.findOne(id);
     }
 
+    async findByName(name): Promise<Paciente[]> {
+        console.log(name);
+        return await this.pacientesDao.find(name);
+    }
+
 }

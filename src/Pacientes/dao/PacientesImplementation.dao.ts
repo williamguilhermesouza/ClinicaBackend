@@ -22,4 +22,8 @@ export class PacientesDao extends PacientesModel implements PacientesDaoInterfac
     async findAll(): Promise<Paciente[]> {
         return this.__findAll();
     }
+
+    async find(name): Promise<Paciente[]> {
+        return this.__find(name);
+    }
 }

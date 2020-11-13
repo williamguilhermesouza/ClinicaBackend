@@ -31,4 +31,8 @@ export class PacientesModel {
         return this.pacienteRepository.find();
     }
 
+    async __find(name): Promise<Paciente[]> {
+        return this.pacienteRepository.find(name);
+    }
+
 }
