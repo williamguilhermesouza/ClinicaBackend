@@ -1,5 +1,8 @@
 ## Phisiotherapy Clinic Backend
 
+![Repo-size](https://img.shields.io/github/repo-size/williamguilhermesouza/ClinicaBackend)
+![Last-commit](https://img.shields.io/github/last-commit/williamguilhermesouza/ClinicaBackend)
+
 This project is meant to be a backend for a Phisiotherapy Clinic System.
 The project is built in NestJS framework.
 
